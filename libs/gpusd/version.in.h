@@ -18,6 +18,8 @@
 #ifndef GPUSD_VERSION_H
 #define GPUSD_VERSION_H
 
+#include <gpusd/api.h>
+
 #include <string>
 
 namespace gpusd
@@ -64,16 +66,16 @@ class Version
 {
 public:
     /** @return the current major version of Gpusd. */
-    static int getMajor();
+    GPUSD_API static int getMajor();
 
     /** @return the current minor version of Gpusd. */
-    static int getMinor();
+    GPUSD_API static int getMinor();
 
     /** @return the current patch level of Gpusd. */
-    static int getPatch();
+    GPUSD_API static int getPatch();
 
     /** @return the current Gpusd version (MM.mm.pp). */
-    static std::string getString();
+    GPUSD_API static std::string getString();
 };
 
 }
